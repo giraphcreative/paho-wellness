@@ -1,0 +1,141 @@
+
+
+.accordions {
+    .accordions-intro {
+        @extend .content-style;
+        padding-bottom: 20px;
+    }
+
+    .accordions-inner {
+        .accordion {
+            position: relative;
+            margin-top: 5px;
+
+            &:before {
+                position: absolute;
+                top: 22px;
+                right: 20px;
+                font-size: 2em;
+                content: '\000BB';
+                font-weight: bold;
+                @include font-bold;
+                color: white;
+                z-index: 1;
+                transition: transform 300ms ease-in-out;
+                transform: rotate( -90deg );
+                pointer-events: none;
+
+                @include respond-to( $bp-m ) {
+                    top: 24px;
+                    right: 30px;
+                }
+
+                @include respond-to( $bp-l ) {
+                    right: 40px;
+                }
+
+                @include respond-to( $bp-xl ) {
+                    top: 30px;
+                    right: 50px;
+                }
+            }
+
+            &.open:before {
+                transform: rotate( 90deg );
+            }
+
+            .accordion-title {
+                font-weight: normal;
+                position: relative;                
+                color: white;
+                @include font-bold;
+                font-size: 1.4em;
+                line-height: 1.3em;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+                cursor: pointer;
+                @include padding-side( 20px, 25px );
+                padding-right: 50px;
+                background: $grey;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    top: -10px;
+                    left: 0;
+                    width: 100%;
+                    background: url(../img/border-grey-top.png) top center / cover no-repeat;
+                    z-index: 2000;
+                }
+            
+                &:after {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    bottom: -10px;
+                    left: 0;
+                    width: 100%;
+                    background: url(../img/border-grey-bottom.png) bottom center / cover no-repeat;
+                    z-index: 2000;
+                }
+            }
+
+            .accordion-content {
+                @include padding-side( 25px, 35px );
+                @extend .content-style;
+                display: none;
+                background: white url(../img/bg-topo-grey.png) top center / cover no-repeat;
+                background-attachment: fixed;
+            }
+
+            &.open {
+                .accordion-content {
+                    //display: block;
+                }
+            }
+
+            &.sea {
+                .accordion-title {
+                    background: $sea;
+                    &:before { background-image: url(../img/border-sea-top.png); }
+                    &:after { background-image: url(../img/border-sea-bottom.png); }
+                }
+            }
+
+            &.cyan {
+                .accordion-title {
+                    background: $cyan;
+                    &:before { background-image: url(../img/border-cyan-top.png); }
+                    &:after { background-image: url(../img/border-cyan-bottom.png); }
+                }
+            }
+
+            &.green {
+                .accordion-title {
+                    background: $green;
+                    &:before { background-image: url(../img/border-green-top.png); }
+                    &:after { background-image: url(../img/border-green-bottom.png); }
+                }
+            }
+
+            &.purple {
+                .accordion-title {
+                    background: $purple;
+                    &:before { background-image: url(../img/border-purple-top.png); }
+                    &:after { background-image: url(../img/border-purple-bottom.png); }
+                }
+            }
+
+            &.grey {
+                .accordion-title {
+                    background: $grey;
+                    &:before { background-image: url(../img/border-grey-top.png); }
+                    &:after { background-image: url(../img/border-grey-bottom.png); }
+                }
+            }
+
+        }
+    }
+}
+

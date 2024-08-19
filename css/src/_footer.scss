@@ -1,0 +1,157 @@
+
+
+footer {
+	@include clearfix;
+	@include padding-side( 30px, 40px );
+	color: white;
+	line-height: 1.5em;
+	text-align: center;
+	background: $sea url(../img/bg-sea-topo.png) top center / cover no-repeat;
+	position: relative;
+	
+	&:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        background: url(../img/border-sea-top.png) top center / cover no-repeat;
+        z-index: 2000;
+    }
+
+	@include respond-to( $bp-m ) {
+		text-align: left;
+	}
+
+	a {
+		color: white;
+		font-weight: bold;
+		transition: opacity 400ms ease-in-out;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	p {
+		padding: 0;
+	}
+
+	.footer-logo {
+		max-width: 400px;
+	}
+
+	.copyright {
+		color: rgba( white, .5 );
+		font-size: .85em;
+	}
+
+	& > .copyright {
+		@include respond-to( $bp-m ) {
+			display: none;
+		}
+	}
+	
+	.social-icons {
+		padding: 10px 0;
+
+		@include respond-to( $bp-m ) {
+			text-align: right;
+		}
+
+		a {
+			margin-right: 5px;
+
+			img {
+				width: 40px;
+			}
+		}
+	}
+
+	.columns {
+		@include respond-to( $bp-m ) {
+			display: flex;
+
+			.column {
+				flex: 1;
+
+				&:first-child {
+					flex-basis: 40%;
+				}
+
+				&:nth-child( 2 ), &:nth-child( 3 ) {
+					flex-basis: 30%;
+				}
+			}
+		}
+
+
+		.footer-info {
+			display: flex;
+			align-items: center;
+			padding: 10px 0;
+
+			.icon {
+				flex: 1;
+				flex-basis: 20%;
+
+				img {
+					max-width: 60px;
+				}
+			}
+
+			.content {
+				flex: 1;
+				flex-basis: 80%;
+				text-align: left;
+				padding-left: 10px;
+			}
+		}
+
+		.copyright {
+			display: none;
+
+			@include respond-to( $bp-m ) {
+				display: block;
+			}
+		}
+
+		.quiet {
+			font-size: .75em;
+		}
+	}
+}
+
+.subfooter {
+	display: flex;
+	padding: 20px;
+	
+	.social-icons, .equal-housing {
+		flex: 1;
+	}
+
+	.social-icons {
+		text-align: left;
+		flex-basis: 75%;
+
+		@include respond-to( $bp-m ) {
+			text-align: center;
+			flex-basis: 90%;
+		}
+	}
+
+	.equal-housing {
+		text-align: right;
+		flex-basis: 25%;
+
+		@include respond-to( $bp-m ) {
+			flex-basis: 10%;
+		}
+	}
+
+	img {
+		max-width: 60px;
+		margin-right: 15px;
+	}
+}

@@ -1,0 +1,63 @@
+
+
+.minutes-container {
+    @include padding-side( 80px, 80px );
+
+    .minutes-inner {
+
+        .column, .video {
+            padding: 30px 30px 0;
+        }
+
+        .video {
+            a.video-link {
+                position: relative;
+                display: block;
+                box-shadow: 5px 5px 15px rgba( black, .2 );
+                transition: opacity 400ms ease-in-out;
+
+                &:hover {
+                    border: none;
+                    opacity: .8;
+                }
+
+                img {
+                    display: block;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: -20px;
+                    right: -20px;
+                    content: "";
+                    background: url(../img/icon-video-play.svg) center center / contain no-repeat;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .read-more-button {
+                padding: 20px;
+            }
+        }
+
+
+        @include respond-to( $bp-m ) {
+            display: flex;
+
+            .column {
+                flex: 1;
+                flex-basis: 44%;
+                padding: 0;
+            }
+
+            .video {
+                flex: 1;
+                flex-basis: 28%;
+                padding: 0 0 0 30px;
+            }
+        }
+
+    }
+}
+

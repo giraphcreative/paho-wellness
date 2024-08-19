@@ -1,0 +1,99 @@
+
+
+.content-two-column {
+    @include padding;
+    background: white url(../img/bg-topo-grey.png) top center / cover no-repeat;
+    background-attachment: fixed;
+    
+    .column-one, .column-two {
+        @extend .content-style;
+    }
+
+    @include respond-to( $bp-m ) {
+        .content-columns {
+            display: flex;
+
+            .column-one {
+                flex: 1;
+                padding-right: 2.5%;
+            }
+
+            .column-two {
+                flex: 1;
+                padding-left: 2.5%;
+            }
+        }
+    }
+
+    &.no-pad {
+        @include padding-side( 0, 0 );
+    }
+
+    &.no-pad-top {
+        @include padding-side( 0, 30px );
+    }
+
+    &.no-pad-bottom {
+        @include padding-side( 30px, 0 );
+    }
+
+    &.sea-curves {
+        position: relative;
+        background: $sea url(../img/bg-subfooter.png) no-repeat top right / cover;
+        margin-bottom: 20px;
+        margin-top: -100px;
+        color: white;
+        @include padding-side( 0, 0 );
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: 10px;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            z-index: 2000;
+            background: url(../img/border-sea-bottom.png) center center / cover no-repeat;
+        }
+
+        h1, h2, h3 {
+            color: white;
+        }
+
+        .column-one {
+            padding-top: 180px;
+        }
+
+        @include respond-to( $bp-m ) {
+            background: url(../img/bg-subfooter.png) no-repeat top center / 100% 100%;
+
+            .content-columns {
+                align-items: flex-end;
+    
+                .column-one {
+                    padding-top: 0;
+                    padding-bottom: 50px;
+                    flex-basis: 55%;
+                }
+    
+                .column-two {
+                    padding-top: 170px;
+                    flex-basis: 45%;
+                }
+            }
+        }
+
+        @include respond-to( $bp-xl ) {
+            h3 {
+                font-size: 1.8em;
+            }
+
+            .content-columns {
+                .column-one {
+                    padding-bottom: 100px;
+                }
+            }
+        }
+    }
+}
+

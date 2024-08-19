@@ -1,0 +1,165 @@
+
+
+body {
+	@include font;
+	margin: 0;
+	color: $sea;
+	background: lighten( $grey-light, 40% );
+
+	font-size: 16px;
+	line-height: 100%;
+
+	@include respond-to( $bp-m ) {
+		font-size: 18px;
+		line-height: 100%;
+	}
+
+	@include respond-to( $bp-l ) {
+		font-size: 20px;
+		line-height: 100%;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include font-bold;
+	line-height: 1.5em;
+	color: $sea;
+
+	em {
+		@include font-bold-italic;
+	}
+}
+
+h1 {
+	font-size: 2.8em;
+	line-height: 1.4em;
+	color: $cyan;
+
+	span {
+		opacity: .7;
+	}
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.4em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+p {
+	@include font;
+	line-height: 1.5em;
+	padding: 8px 0;
+
+	@include respond-to( $bp-m ) {
+		padding: 12px 0;
+	}
+
+	&.large {
+		font-size: 1.2em;
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+a {
+	color: $sea;
+	text-decoration: none;
+
+	&:hover {
+		border-bottom: 1px dotted $sea;
+
+		img {
+			border-bottom: none;
+		}
+	}
+}
+
+img {
+	&.alignleft {
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+
+	&.aligncenter {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+code, pre {
+	font-family: monospace;
+	background-color: #eee;
+	padding: 5px 10px;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+
+hr {
+	height: 20px;
+	margin: 7px 0;
+	border: 0;
+	background: url(../img/separator.png) no-repeat center / 100% 100%;
+}
+
+pre {
+	max-width: 100%;
+	overflow: auto;
+	margin: 15px 0;
+	font-size: 1em;
+	min-height: 35px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.paginate {
+	border-top: 1px solid lighten( $grey, 30% );
+	padding: 15px 0;
+	text-align: center;
+	font-size: 15px;
+	line-height: 15px;
+	background: lighten( $grey, 35% );
+	@include font;
+
+	@include respond-to( $bp-m ) {
+		padding: 40px 0;
+	}
+
+	a {
+		padding: 7px 12px;
+		background: $grey;
+		color: white;
+		text-decoration: none;
+		display: inline-block;
+
+		&:hover {
+			background: lighten( $grey, 5% );
+		}
+	}
+
+	.current {
+		padding: 7px 12px;
+		display: inline-block;
+		background: lighten( $grey, 5% );
+	}
+}
+

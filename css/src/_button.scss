@@ -1,0 +1,64 @@
+
+
+.buttons {
+	padding: 15px 0;
+}
+
+
+// general button styles
+.btn {
+	@include font-bold;
+	opacity: 1;
+	border: 0;
+	padding: 13px 18px 14px;
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+	transition: opacity 400ms ease-in-out;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	background: url(../img/bg-button-grey.png) no-repeat center / 100% 100%;
+	color: white;
+	-webkit-appearance: none;
+	border-radius: 0;
+	position: relative;
+
+	&.large {
+		font-size: 1.5em;
+		padding: 20px 35px;
+	}
+
+	&.small {
+		font-size: 17px;
+		padding: 10px 16px 11px;
+	}
+
+	&.green {
+		background: url(../img/bg-button-green.png) no-repeat center / 100% 100%;
+		color: $sea;
+	}
+
+	&.sea {
+		background: url(../img/bg-button-sea.png) no-repeat center / 100% 100%;
+	}
+
+	&.cyan {
+		background: url(../img/bg-button-cyan.png) no-repeat center / 100% 100%;
+	}
+
+	&.purple {
+		background: url(../img/bg-button-purple.png) no-repeat center / 100% 100%;
+	}
+
+}
+
+a.btn {
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+		opacity: .8;
+		border-bottom: none;
+	}
+}

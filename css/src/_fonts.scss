@@ -1,0 +1,39 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+@font-face {
+    font-family: 'FG Bunnigrrrl';
+    src: url('fonts/fg-bunnigrrrl.woff2') format('woff2'),
+        url('fonts/fg-bunnigrrrl.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin font {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+@mixin font-italic {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+@mixin font-bold {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+}
+
+@mixin font-bold-italic {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+@mixin font-cursive {
+	font-family: "FG Bunnigrrrl", sans-serif;
+	font-weight: 400;
+}
