@@ -39,11 +39,14 @@
 			// increment per language
 			$count = 0;
 
+			// get the current language
+			$current_language = str_replace( '/', '', get_current_language_abbrev() );
+
 			// loop through languages
 			foreach ( get_languages() as $language ) {
 
 				// output buttons
-				print '<a href="/' . $language['abbreviation'] . '" class="btn small ' . $colors[$count] . '">' . $language['name'] . '</a>';
+				print '<a href="' . str_replace( $current_language, $language['abbreviation'], $_SERVER['REQUEST_URI'] ) . '" class="btn small ' . $colors[$count] . '">' . $language['name'] . '</a>';
 
 				// increment increase
 				$count++;

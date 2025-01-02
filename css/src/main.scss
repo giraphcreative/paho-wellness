@@ -8,6 +8,7 @@ $grey-dark: #444444;
 $cyan: #2fadde;
 $sea: #064e68;
 $purple: #87049d;
+$lime: #80c143;
 
 
 
@@ -28,7 +29,7 @@ $bp-xxl: 1440px;
 
 
 // import the component styles
-@import "component-header", "component-floating-buttons", "component-blockquote", "component-icons", "component-icon-boxes", "component-separator", "component-content-area", "component-content-two", "component-accordions", "component-post-list", "component-slides", "component-spacer", "component-minutes";
+@import "component-header", "component-floating-buttons", "component-big-box", "component-blockquote", "component-icons", "component-icon-boxes", "component-separator", "component-content-area", "component-content-two", "component-accordions", "component-post-list", "component-slides", "component-spacer", "component-minutes";
 
 
 // import lightbox styles

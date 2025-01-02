@@ -1,0 +1,32 @@
+
+
+.big-box {
+    .box {
+        max-width: 1024px;
+        margin: 20px auto;
+        background: rgba( black, .1 );
+
+        .box-title {
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+
+            &.sea {
+                background: $sea;
+            }
+
+            &.cyan {
+                background: $cyan;
+            }
+
+            &.lime {
+                background: $lime;
+            }
+        }
+
+        .box-content {
+            padding: 20px;
+        }
+    }
+}
+

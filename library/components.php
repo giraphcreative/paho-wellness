@@ -3,7 +3,7 @@
 
 // include components
 require_multi( 
-    'component/header', 'component/floating-buttons', 'component/slides','component/icons', 'component/blockquote', 'component/separator', 'component/content', 'component/content-two', 'component/icon-boxes', 'component/accordions', 'component/post-list', 'component/minutes', 'component/spacer' );
+    'component/header', 'component/floating-buttons', 'component/big-box', 'component/slides','component/icons', 'component/blockquote', 'component/separator', 'component/content', 'component/content-two', 'component/icon-boxes', 'component/accordions', 'component/post-list', 'component/minutes', 'component/spacer' );
 
 
 function the_components() {
@@ -35,6 +35,9 @@ function the_components() {
 
             elseif ( get_row_layout() == 'content-two' ): 
                 the_content_two_column();
+                                            
+            elseif ( get_row_layout() == 'big-box' ): 
+                the_big_box();                                            
                 
             elseif ( get_row_layout() == 'icons' ): 
                 the_icons();
