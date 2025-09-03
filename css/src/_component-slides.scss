@@ -101,6 +101,10 @@
                 @include respond-to( $bp-xl ) {
                     font-size: 2.3em;
                 }
+
+                &.white {
+                    color: white;
+                }
             }
 
             h4, h5, h6 {
