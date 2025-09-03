@@ -24,8 +24,13 @@ function my_wpeditor_formats_options( $settings ){
     /* List all options as multi dimension array */
     $style_formats = array(
         array(
-            'title'   => 'Heading 1',
+            'title'   => 'Heading 1 (Sea)',
             'block'   => 'h1',
+        ),
+        array(
+            'title'   => 'Heading 1 (White)',
+            'block'   => 'h1',
+            'classes' => 'white'
         ),
         array(
             'title'   => 'Heading 2 (Sea)',
