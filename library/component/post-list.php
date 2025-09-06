@@ -6,6 +6,7 @@ function the_post_list() {
     $title = get_sub_field( 'title' );
     $category = implode( ',', get_sub_field( 'category' ) );
     $posts_per_page = get_sub_field( 'posts_per_page' );
+    $posts_footer = get_sub_field( 'posts_footer' );
 
     if ( !empty( $category ) ) {
         ?>
@@ -17,6 +18,10 @@ function the_post_list() {
             </div>
         </div>
         <?php
+    }
+
+    if ( !empty( $posts_footer ) ) {
+        print $posts_footer;
     }
 
 }

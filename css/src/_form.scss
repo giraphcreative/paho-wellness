@@ -57,6 +57,8 @@ button, input[type=submit] {
 	// lets set some padding on all text fields.	
 	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
 		@extend .text-field;
+		outline: none;
+		-moz-appearance:none;
 
 		&:focus {
 			border: 3px solid $green;
@@ -110,6 +112,7 @@ button, input[type=submit] {
 			@extend .btn;
 			background-color: $green;
 			color: white;
+			cursor: pointer;
 		}
 	}
 
