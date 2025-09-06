@@ -38,19 +38,22 @@ function articles_shortcode( $atts ) {
         // Start looping over the query results.
         while ( $query->have_posts() ) {
             $query->the_post();
+            $link = get_the_permalink();
+            $offsite_link = get_field( 'offsite_link' );
+            if ( !empty( $offsite_link ) ) $link = $offsite_link;
             $categories = get_the_category();
             $cat = $categories[0];
             $return .= '<div class="entry">';
             $return .= '<div class="entry-thumbnail">';
-            $return .= '<a href="' . get_the_permalink() . '">';
+            $return .= '<a href="' . $link . '">';
             $return .= get_the_post_thumbnail( null, array( 768, 480 ) );
             $return .= '</a>';
             $return .= '</div>';
             $return .= '<div class="entry-inner">';
-            $return .= '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+            $return .= '<h4><a href="' . $link . '">' . get_the_title() . '</a></h4>';
             $return .= '<p class="post-date">' . get_the_date() . '</p>';
             $return .= wpautop( get_the_excerpt() );
-            $return .= '<p><a href="' . get_the_permalink() . '" class="btn green">' . ( $_SESSION['language']['abbreviation'] == 'es' ? 'Leer Más' : 'Read More' ) . ' &raquo;</a></p>';
+            $return .= '<p><a href="' . $link . '" class="btn green">' . ( $_SESSION['language']['abbreviation'] == 'es' ? 'Leer Más' : 'Read More' ) . ' &raquo;</a></p>';
             $return .= '</div>';
             $return .= '</div>';
         }
