@@ -23,7 +23,7 @@ function the_minutes() {
             $button_link = get_sub_field('button_link');
             echo '<div class="video">
                 <a href="' . $link . '" class="lightbox-iframe video-link"><img src="' . $image . '" /></a>
-                <div class="read-more-button text-center">' . do_shortcode( '[button class="green" url="' . $button_link . '"]' . ( $_SESSION['language']['abbreviation'] == 'es' ? 'Leer Más' : 'Read More' ) .' &raquo;[/button]' ) . '</div>
+                <div class="read-more-button text-center">' . do_shortcode( '[button class="green" url="' . $button_link . '"]' . ( $_SESSION['language']['abbreviation'] == 'es' ? 'Leer Más' : 'Watch Now' ) .' &raquo;[/button]' ) . '</div>
             </div>';
 
         endwhile;
