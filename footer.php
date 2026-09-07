@@ -33,7 +33,7 @@ $admin_email = get_option( 'admin_email' );
 							<img src="<?php bloginfo( 'template_url' ); ?>/img/icon-web.svg" />
 						</div>
 						<div class="content">
-							<a href="https://www.pahofcu.org">www.pahofcu.org</a>
+							<a href="https://bienestarfcu.org">www.bienestarfcu.org</a>
 						</div>
 					</div>
 				</div>
